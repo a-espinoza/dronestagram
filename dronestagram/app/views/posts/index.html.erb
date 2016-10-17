@@ -1,9 +1,12 @@
-<%= "DronesTagram"  %>
+<h1>"DronesTagram"</h1>
+<body>
+  <% @posts.each do |post| %>
+    <%=image_tag post.image.url(:medium)%>
+    <%=post.caption%>
+    <% end %>
+</body>
 
-<% @posts.each do |post| %>
-  <%=image_tag post.image.url(:medium)%>
-  <%=post.caption%>
-  <% end %>
+
 
 <!documentation to figureout how to actually post the picture and not the URL!
 # http:// api.rubyonrails.org/classes/ActionView/Helpers/AssetTagHelper.html#method-i-image_tag -->

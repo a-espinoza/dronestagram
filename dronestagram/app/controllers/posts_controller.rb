@@ -15,9 +15,13 @@ def create
   redirect_to posts_path
 end
 
-end
 private
 
+#Prevent from allowing diffrent kinds of files.. Image and text for caption!
 def post_params
   params.require(:post).permit(:image, :caption)
+end
+
+
+
 end
